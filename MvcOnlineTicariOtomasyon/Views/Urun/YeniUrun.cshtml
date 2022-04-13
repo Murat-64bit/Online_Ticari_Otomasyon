@@ -1,0 +1,36 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Urun
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<h2>Yeni Ürün Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x => x.urunad, new { @class = "form-control" })
+    <br />
+    @Html.Label("Marka")
+    @Html.TextBoxFor(x => x.marka, new { @class = "form-control" })
+    <br />
+    @Html.Label("Stok")
+    @Html.TextBoxFor(x => x.stok, new { @class = "form-control" })
+    <br />
+    @Html.Label("Alış Fiyat")
+    @Html.TextBoxFor(x => x.alisfiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Satış Fiyat")
+    @Html.TextBoxFor(x => x.satisfiyat, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.kategoriid, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Ürün Görsel")
+    @Html.TextBoxFor(x => x.urungorsel, new { @class = "form-control" })
+    <br />
+    @Html.Label("Durum")
+    @Html.TextBoxFor(x => x.durum, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ürün Ekle</button>
+</form>
